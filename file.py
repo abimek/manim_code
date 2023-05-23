@@ -468,17 +468,6 @@ class HiggsIntro(Scene):
         self.play(*[FadeOut(mob) for mob in self.mobjects])
         self.wait(1)
 
-## PHOTONS DON't INTERACT
-
-class PhotonsDontInteractWithTheHiggsField(Scene):
-    def construct(self):
-        pho = Text('γ', color=BLACK)
-        circle = Circle(fill_color=YELLOW, fill_opacity=.8, color=YELLOW)
-        circle.surround(pho)
-        photon_n = VGroup(pho, circle)
-        photon_n.to_edge(LEFT)
-        self.play(Create(photon_n))
-
 
 class HiggsBoson(Scene):
     def construct(self):
